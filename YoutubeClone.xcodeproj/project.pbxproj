@@ -19,6 +19,7 @@
 		C3AF8D2A20FA08C8009544BC /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D2920FA08C8009544BC /* MenuBar.swift */; };
 		C3AF8D2C20FA1217009544BC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D2B20FA1217009544BC /* MenuCell.swift */; };
 		C3AF8D2E20FA1294009544BC /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D2D20FA1294009544BC /* BaseCell.swift */; };
+		C3AF8D3120FA2702009544BC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3020FA2702009544BC /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		C3AF8D2920FA08C8009544BC /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		C3AF8D2B20FA1217009544BC /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		C3AF8D2D20FA1294009544BC /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		C3AF8D3020FA2702009544BC /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		C3AF8CF320F9C84D009544BC /* YoutubeClone */ = {
 			isa = PBXGroup;
 			children = (
+				C3AF8D2F20FA26E9009544BC /* Model */,
 				C3AF8D2620FA0645009544BC /* View */,
 				C3AF8D2520FA0604009544BC /* Controllers */,
 				C3AF8D2220FA05DD009544BC /* Helpers */,
@@ -162,6 +165,14 @@
 				C3AF8D2D20FA1294009544BC /* BaseCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C3AF8D2F20FA26E9009544BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3AF8D3020FA2702009544BC /* Video.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 				C3AF8D2C20FA1217009544BC /* MenuCell.swift in Sources */,
 				C3AF8D2420FA05EF009544BC /* Extensions.swift in Sources */,
 				C3AF8D2E20FA1294009544BC /* BaseCell.swift in Sources */,
+				C3AF8D3120FA2702009544BC /* Video.swift in Sources */,
 				C3AF8CF520F9C84D009544BC /* AppDelegate.swift in Sources */,
 				C3AF8D2A20FA08C8009544BC /* MenuBar.swift in Sources */,
 			);

@@ -10,6 +10,25 @@ import UIKit
 
 class VideoCell: BaseCell {
     
+    var video: Video? {
+        didSet {
+            titleLabel.text = video?.title
+            
+            thumbnailImageView.image = UIImage(named: (video?.thumbnailImageName)!)
+            
+            if let profileImageName = video?.channel?.profileImageName,
+                let numberOfViews = video?.numberOfViews,
+                let videoName = video?.channel?.name {
+                userProfileImageView.image = UIImage(named: profileImageName)
+                
+                let numberFormatter = NumberFormatter()
+                numberFormatter.numberStyle = .decimal
+                
+                subtitleTextView.text = "\(videoName) • \(numberFormatter.string(from: numberOfViews)!) • 2 years ago"
+            }
+        }
+    }
+    
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "taylor_swift_blank_space")
