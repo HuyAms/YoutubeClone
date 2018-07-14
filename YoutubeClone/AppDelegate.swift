@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,6 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        
+        UINavigationBar.appearance().barTintColor = UIColor.rgb(red: 230, green: 32, blue: 31, alpha: 1)
+        
+        application.statusBarStyle = .lightContent
+        
+        let statusBarBackground = UIView()
+        if let window = window {
+            statusBarBackground.frame = CGRect(x: 0, y: 0, width: window.frame.width, height: 20)
+        }
+        statusBarBackground.backgroundColor = UIColor.rgb(red: 194, green: 31, blue: 31, alpha: 1)
+        window?.addSubview(statusBarBackground)
+        
         
         return true
     }
