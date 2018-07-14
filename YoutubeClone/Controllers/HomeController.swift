@@ -12,28 +12,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     let cellId = "cellId"
     
-    var videos: [Video] = {
-        var taylorSwiftChannel = Channel()
-        taylorSwiftChannel.name = "TaylorSwiftVEVO"
-        taylorSwiftChannel.profileImageName = "taylor_swift_profile"
-        
-        var blankSpaceVideo = Video()
-        blankSpaceVideo.title = "Taylor Swift - Blank Space"
-        blankSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
-        blankSpaceVideo.channel = taylorSwiftChannel
-        blankSpaceVideo.numberOfViews = 845839583
-        
-        var badBloodVideo = Video()
-        badBloodVideo.title = "Taylor Swift - Bad Blood featuring Kendrick Lamar"
-        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
-        badBloodVideo.channel = taylorSwiftChannel
-        badBloodVideo.numberOfViews = 293847392
-        
-        return [blankSpaceVideo, badBloodVideo]
-    }()
+    var videos = [Video]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NetworkService.shared.loadVideos { (videos) in
+            self.videos = videos
+            self.collectionView?.reloadData()
+        }
         
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false

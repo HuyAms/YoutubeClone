@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC2E9AD5B40AADFF1AF46A7 /* Pods_YoutubeClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71D1584AB1F96EA53F62B63 /* Pods_YoutubeClone.framework */; };
+		66522409E8C916270FE039AC /* Pods_YoutubeCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5496380A45569726ADC974 /* Pods_YoutubeCloneUITests.framework */; };
 		C3AF8CF520F9C84D009544BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8CF420F9C84D009544BC /* AppDelegate.swift */; };
 		C3AF8CF720F9C84D009544BC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8CF620F9C84D009544BC /* HomeController.swift */; };
 		C3AF8CFA20F9C84D009544BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3AF8CF820F9C84D009544BC /* Main.storyboard */; };
@@ -20,6 +22,9 @@
 		C3AF8D2C20FA1217009544BC /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D2B20FA1217009544BC /* MenuCell.swift */; };
 		C3AF8D2E20FA1294009544BC /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D2D20FA1294009544BC /* BaseCell.swift */; };
 		C3AF8D3120FA2702009544BC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3020FA2702009544BC /* Video.swift */; };
+		C3AF8D3320FA33E6009544BC /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = C3AF8D3220FA33E5009544BC /* home.json */; };
+		C3AF8D3620FA3489009544BC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3520FA3489009544BC /* NetworkService.swift */; };
+		DF0AD534A3994191F5F5AF01 /* Pods_YoutubeCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D299D5EBC34FB1CA2C19DB9 /* Pods_YoutubeCloneTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BDAEADC639E8721D9B1A7BF /* Pods-YoutubeClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone.release.xcconfig"; sourceTree = "<group>"; };
+		1D299D5EBC34FB1CA2C19DB9 /* Pods_YoutubeCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		529F3B9A923C0B42FA73F62A /* Pods-YoutubeCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCloneTests/Pods-YoutubeCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B587DE1A9683496FB8EE3E4 /* Pods-YoutubeCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCloneUITests/Pods-YoutubeCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		844BB45B924E02BE49CDBF7F /* Pods-YoutubeCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCloneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCloneUITests/Pods-YoutubeCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		972BC4B5C4DCF76FA6B46207 /* Pods-YoutubeClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone.debug.xcconfig"; sourceTree = "<group>"; };
+		B71D1584AB1F96EA53F62B63 /* Pods_YoutubeClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84C8B162655EE4E66A34AF5 /* Pods-YoutubeCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeCloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeCloneTests/Pods-YoutubeCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3AF8CF120F9C84D009544BC /* YoutubeClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AF8CF420F9C84D009544BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AF8CF620F9C84D009544BC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -59,6 +72,9 @@
 		C3AF8D2B20FA1217009544BC /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		C3AF8D2D20FA1294009544BC /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		C3AF8D3020FA2702009544BC /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C3AF8D3220FA33E5009544BC /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
+		C3AF8D3520FA3489009544BC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FF5496380A45569726ADC974 /* Pods_YoutubeCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC2E9AD5B40AADFF1AF46A7 /* Pods_YoutubeClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0AD534A3994191F5F5AF01 /* Pods_YoutubeCloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66522409E8C916270FE039AC /* Pods_YoutubeCloneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12FCFE2AF102C2F697102E98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B71D1584AB1F96EA53F62B63 /* Pods_YoutubeClone.framework */,
+				1D299D5EBC34FB1CA2C19DB9 /* Pods_YoutubeCloneTests.framework */,
+				FF5496380A45569726ADC974 /* Pods_YoutubeCloneUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87277DBF65FE8572AA378ED2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				972BC4B5C4DCF76FA6B46207 /* Pods-YoutubeClone.debug.xcconfig */,
+				0BDAEADC639E8721D9B1A7BF /* Pods-YoutubeClone.release.xcconfig */,
+				B84C8B162655EE4E66A34AF5 /* Pods-YoutubeCloneTests.debug.xcconfig */,
+				529F3B9A923C0B42FA73F62A /* Pods-YoutubeCloneTests.release.xcconfig */,
+				6B587DE1A9683496FB8EE3E4 /* Pods-YoutubeCloneUITests.debug.xcconfig */,
+				844BB45B924E02BE49CDBF7F /* Pods-YoutubeCloneUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C3AF8CE820F9C84D009544BC = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +135,8 @@
 				C3AF8D0820F9C84D009544BC /* YoutubeCloneTests */,
 				C3AF8D1320F9C84D009544BC /* YoutubeCloneUITests */,
 				C3AF8CF220F9C84D009544BC /* Products */,
+				87277DBF65FE8572AA378ED2 /* Pods */,
+				12FCFE2AF102C2F697102E98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,12 +153,14 @@
 		C3AF8CF320F9C84D009544BC /* YoutubeClone */ = {
 			isa = PBXGroup;
 			children = (
+				C3AF8D3420FA3473009544BC /* Service */,
 				C3AF8D2F20FA26E9009544BC /* Model */,
 				C3AF8D2620FA0645009544BC /* View */,
 				C3AF8D2520FA0604009544BC /* Controllers */,
 				C3AF8D2220FA05DD009544BC /* Helpers */,
 				C3AF8CF420F9C84D009544BC /* AppDelegate.swift */,
 				C3AF8CF820F9C84D009544BC /* Main.storyboard */,
+				C3AF8D3220FA33E5009544BC /* home.json */,
 				C3AF8CFB20F9C84D009544BC /* Assets.xcassets */,
 				C3AF8CFD20F9C84D009544BC /* LaunchScreen.storyboard */,
 				C3AF8D0020F9C84D009544BC /* Info.plist */,
@@ -175,6 +221,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C3AF8D3420FA3473009544BC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C3AF8D3520FA3489009544BC /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3AF8D1920F9C84D009544BC /* Build configuration list for PBXNativeTarget "YoutubeClone" */;
 			buildPhases = (
+				FA227835BB6BB3BC0355F4E1 /* [CP] Check Pods Manifest.lock */,
 				C3AF8CED20F9C84D009544BC /* Sources */,
 				C3AF8CEE20F9C84D009544BC /* Frameworks */,
 				C3AF8CEF20F9C84D009544BC /* Resources */,
+				13C3D1D746241A93A30A6465 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3AF8D1C20F9C84D009544BC /* Build configuration list for PBXNativeTarget "YoutubeCloneTests" */;
 			buildPhases = (
+				53D9234E981C829D9A82EE7E /* [CP] Check Pods Manifest.lock */,
 				C3AF8D0120F9C84D009544BC /* Sources */,
 				C3AF8D0220F9C84D009544BC /* Frameworks */,
 				C3AF8D0320F9C84D009544BC /* Resources */,
@@ -217,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3AF8D1F20F9C84D009544BC /* Build configuration list for PBXNativeTarget "YoutubeCloneUITests" */;
 			buildPhases = (
+				4622ABE9AE3BD6A74B09330B /* [CP] Check Pods Manifest.lock */,
 				C3AF8D0C20F9C84D009544BC /* Sources */,
 				C3AF8D0D20F9C84D009544BC /* Frameworks */,
 				C3AF8D0E20F9C84D009544BC /* Resources */,
@@ -284,6 +342,7 @@
 			files = (
 				C3AF8CFF20F9C84D009544BC /* LaunchScreen.storyboard in Resources */,
 				C3AF8CFC20F9C84D009544BC /* Assets.xcassets in Resources */,
+				C3AF8D3320FA33E6009544BC /* home.json in Resources */,
 				C3AF8CFA20F9C84D009544BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +363,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13C3D1D746241A93A30A6465 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeClone/Pods-YoutubeClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4622ABE9AE3BD6A74B09330B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoutubeCloneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53D9234E981C829D9A82EE7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoutubeCloneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA227835BB6BB3BC0355F4E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YoutubeClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3AF8CED20F9C84D009544BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -313,6 +447,7 @@
 				C3AF8D2820FA0662009544BC /* VideoCell.swift in Sources */,
 				C3AF8D2C20FA1217009544BC /* MenuCell.swift in Sources */,
 				C3AF8D2420FA05EF009544BC /* Extensions.swift in Sources */,
+				C3AF8D3620FA3489009544BC /* NetworkService.swift in Sources */,
 				C3AF8D2E20FA1294009544BC /* BaseCell.swift in Sources */,
 				C3AF8D3120FA2702009544BC /* Video.swift in Sources */,
 				C3AF8CF520F9C84D009544BC /* AppDelegate.swift in Sources */,
@@ -480,6 +615,7 @@
 		};
 		C3AF8D1A20F9C84D009544BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972BC4B5C4DCF76FA6B46207 /* Pods-YoutubeClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +630,7 @@
 		};
 		C3AF8D1B20F9C84D009544BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BDAEADC639E8721D9B1A7BF /* Pods-YoutubeClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +645,7 @@
 		};
 		C3AF8D1D20F9C84D009544BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84C8B162655EE4E66A34AF5 /* Pods-YoutubeCloneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +662,7 @@
 		};
 		C3AF8D1E20F9C84D009544BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529F3B9A923C0B42FA73F62A /* Pods-YoutubeCloneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +679,7 @@
 		};
 		C3AF8D2020F9C84D009544BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B587DE1A9683496FB8EE3E4 /* Pods-YoutubeCloneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +695,7 @@
 		};
 		C3AF8D2120F9C84D009544BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844BB45B924E02BE49CDBF7F /* Pods-YoutubeCloneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

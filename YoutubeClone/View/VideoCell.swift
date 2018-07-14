@@ -14,17 +14,19 @@ class VideoCell: BaseCell {
         didSet {
             titleLabel.text = video?.title
             
-            thumbnailImageView.image = UIImage(named: (video?.thumbnailImageName)!)
-            
             if let profileImageName = video?.channel?.profileImageName,
                 let numberOfViews = video?.numberOfViews,
-                let videoName = video?.channel?.name {
-                userProfileImageView.image = UIImage(named: profileImageName)
+                let videoName = video?.channel?.name,
+                let thumbNailImageName = video?.thumbnailImageName {
+                
+                thumbnailImageView.loadImage(imageUrl: thumbNailImageName)
+
+                userProfileImageView.loadImage(imageUrl: profileImageName)
                 
                 let numberFormatter = NumberFormatter()
                 numberFormatter.numberStyle = .decimal
                 
-                subtitleTextView.text = "\(videoName) • \(numberFormatter.string(from: numberOfViews)!) • 2 years ago"
+                subtitleTextView.text = "\(videoName) • \(numberFormatter.string(from: numberOfViews as NSNumber)!) • 2 years ago"
             }
         }
     }
