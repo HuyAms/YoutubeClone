@@ -28,6 +28,7 @@
 		C3AF8D3A20FB3E03009544BC /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3920FB3E03009544BC /* SettingCell.swift */; };
 		C3AF8D3C20FB411C009544BC /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3B20FB411C009544BC /* Setting.swift */; };
 		C3AF8D3E20FC9C35009544BC /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3D20FC9C35009544BC /* FeedCell.swift */; };
+		C3AF8D4020FCB32A009544BC /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AF8D3F20FCB32A009544BC /* VideoLauncher.swift */; };
 		DF0AD534A3994191F5F5AF01 /* Pods_YoutubeCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D299D5EBC34FB1CA2C19DB9 /* Pods_YoutubeCloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		C3AF8D3920FB3E03009544BC /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		C3AF8D3B20FB411C009544BC /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		C3AF8D3D20FC9C35009544BC /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C3AF8D3F20FCB32A009544BC /* VideoLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLauncher.swift; sourceTree = "<group>"; };
 		FF5496380A45569726ADC974 /* Pods_YoutubeCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 			children = (
 				C3AF8CF620F9C84D009544BC /* HomeController.swift */,
 				C3AF8D3720FB2B6D009544BC /* SettingLauncher.swift */,
+				C3AF8D3F20FCB32A009544BC /* VideoLauncher.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C3AF8CF720F9C84D009544BC /* HomeController.swift in Sources */,
 				C3AF8D2820FA0662009544BC /* VideoCell.swift in Sources */,
 				C3AF8D3C20FB411C009544BC /* Setting.swift in Sources */,
+				C3AF8D4020FCB32A009544BC /* VideoLauncher.swift in Sources */,
 				C3AF8D2C20FA1217009544BC /* MenuCell.swift in Sources */,
 				C3AF8D2420FA05EF009544BC /* Extensions.swift in Sources */,
 				C3AF8D3A20FB3E03009544BC /* SettingCell.swift in Sources */,
