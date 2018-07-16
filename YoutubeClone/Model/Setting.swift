@@ -17,3 +17,4 @@ class Setting {
         self.imageName = imageName
     }
 }
+

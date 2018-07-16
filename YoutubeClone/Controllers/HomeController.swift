@@ -22,7 +22,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             self.collectionView?.reloadData()
         }
         
-        navigationItem.title = "Home"
+        navigationItem.title = "  Home"
         navigationController?.navigationBar.isTranslucent = false
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
@@ -83,9 +83,20 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }()
     
     private func setupMenuBar() {
+        navigationController?.hidesBarsOnSwipe = true
+        
+        let redView = UIView()
+        redView.translatesAutoresizingMaskIntoConstraints = false
+        redView.backgroundColor = UIColor.rgb(red: 230, green: 32, blue: 31, alpha: 1)
+        view.addSubview(redView)
+        redView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        redView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        redView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         view.addSubview(menuBar)
         
         //menuBar
+        menuBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         menuBar.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         menuBar.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
