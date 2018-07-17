@@ -26,6 +26,15 @@ class VideoPlayerView: UIView {
         return view
     }()
     
+    let videoLengthLabel: UILabel = {
+        let label = UILabel()
+        label.text = "00:00"
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        return label
+    }()
+    
     lazy var pausePlayButton: UIButton = {
         let button = UIButton(type: .system)
         let image = UIImage(named: "pause")
@@ -35,6 +44,16 @@ class VideoPlayerView: UIView {
         button.isHidden = true
         button.addTarget(self, action: #selector(handlePause), for: .touchUpInside)
         return button
+    }()
+    
+    lazy var videoSlider: UISlider = {
+        let slider = UISlider()
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.minimumTrackTintColor = .red
+        slider.maximumTrackTintColor = .white
+        slider.setThumbImage(UIImage(named: "thumb"), for: .normal)
+        slider.addTarget(self, action: #selector(handleSliderChange), for: .valueChanged)
+        return slider
     }()
     
     @objc func handlePause() {
@@ -47,6 +66,21 @@ class VideoPlayerView: UIView {
         }
     
         isPlaying = !isPlaying
+    }
+    
+    @objc func handleSliderChange() {
+        if let duration = player?.currentItem?.duration {
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let value = Float64(videoSlider.value) * totalSeconds
+            
+            let seekTime = CMTime(value: Int64(value), timescale: 1)
+            
+            player?.seek(to: seekTime, completionHandler: { (completedSeek) in
+
+            })
+        }
+        
+      
     }
     
     override init(frame: CGRect) {
@@ -66,6 +100,18 @@ class VideoPlayerView: UIView {
         pausePlayButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         pausePlayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         pausePlayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        controlContainerView.addSubview(videoLengthLabel)
+        videoLengthLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
+        videoLengthLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        videoLengthLabel.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        videoLengthLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        
+        controlContainerView.addSubview(videoSlider)
+        videoSlider.rightAnchor.constraint(equalTo: videoLengthLabel.leftAnchor, constant: -8).isActive = true
+        videoSlider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        videoSlider.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
+        videoSlider.heightAnchor.constraint(equalToConstant: 30).isActive = true
     }
     
     var player: AVPlayer?
@@ -90,7 +136,73 @@ class VideoPlayerView: UIView {
             controlContainerView.backgroundColor = .clear
             pausePlayButton.isHidden = false
             isPlaying = true
+            
+            if let duration = player?.currentItem?.duration {
+                let seconds = CMTimeGetSeconds(duration)
+                let secondsText = Int(seconds.truncatingRemainder(dividingBy: 60))
+                let minutesText = String(format: "%02d", Int(seconds) / 60)
+                videoLengthLabel.text = "\(minutesText):\(secondsText)"
+            }
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class UpNextVideoView: UIView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    let cellId = "cellId"
+    var videos = [Video]()
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.delegate = self
+        cv.dataSource = self
+        cv.backgroundColor = .white
+        return cv
+    }()
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return videos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId , for: indexPath) as! UpNextVideoCell
+        cell.video = videos[indexPath.item]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = 120 * 9 / 16
+        return CGSize(width: frame.width, height: CGFloat(height + 16))
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        NetworkService.shared.loadVideos { (videos) in
+            self.videos = videos
+            self.collectionView.reloadData()
+        }
+        
+        addSubview(collectionView)
+        
+        collectionView.register(UpNextVideoCell.self, forCellWithReuseIdentifier: cellId)
+        
+        //collectionView
+        collectionView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        collectionView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -118,6 +230,10 @@ class VideoLaucher: NSObject {
             }, completion: { (complete) in
                 UIApplication.shared.setStatusBarHidden(true, with: .fade)
             })
+            
+            let upNextVideViewFrame = CGRect(x: 0, y: height, width: keyWindow.frame.width, height: keyWindow.frame.height - height)
+            let upNextVideoView = UpNextVideoView(frame: upNextVideViewFrame)
+            view.addSubview(upNextVideoView)
         }
     }
     
